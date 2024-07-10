@@ -334,6 +334,11 @@ H5T__conv_f_f_loop(const H5T_t *src_p, const H5T_t *dst_p, const H5T_conv_ctx_t 
                 HGOTO_ERROR(H5E_DATATYPE, H5E_CANTCONVERT, FAIL, "can't handle conversion exception");
 
             goto padding;
+            /* Temporary solution to handle VAX special values.
+             * Note that even though we don't support VAX anymore, we
+             * still need to handle legacy VAX files so this code must
+             * remain in place.
+             */
         }
 
         /*
