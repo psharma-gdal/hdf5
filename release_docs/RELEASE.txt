@@ -570,7 +570,9 @@ New Features
         H5T_NATIVE_DOUBLE_COMPLEX <-> H5T_NATIVE_LDOUBLE_COMPLEX
 
       Alternative software implementation conversion paths have been added for all of
-      the above for use when native complex number support is not available.
+      the above for use when native complex number support is not available. All of these
+      conversion paths follow the behavior outlined in the C standard for conversions of
+      complex number values.
 
       Additionally, a special datatype conversion path has been added between complex number
       datatypes and array or compound datatypes where the in-memory layout of data is the
