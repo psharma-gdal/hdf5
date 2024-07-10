@@ -3941,9 +3941,9 @@ filled according to the value of this property. The padding can be:
  *   <enum_symbol> ::= <identifier>
  *   <enum_val> ::= <int_value>
  *   <complex_type> ::= H5T_COMPLEX { <complex_base_type> <complex_base_type> } |
- *                      H5T_CPLX_IEEE_F16BE | H5T_CPLX_IEEE_F16LE |
- *                      H5T_CPLX_IEEE_F32BE | H5T_CPLX_IEEE_F32LE |
- *                      H5T_CPLX_IEEE_F64BE | H5T_CPLX_IEEE_F64LE |
+ *                      H5T_COMPLEX_IEEE_F16BE   | H5T_COMPLEX_IEEE_F16LE    |
+ *                      H5T_COMPLEX_IEEE_F32BE   | H5T_COMPLEX_IEEE_F32LE    |
+ *                      H5T_COMPLEX_IEEE_F64BE   | H5T_COMPLEX_IEEE_F64LE    |
  *                      H5T_NATIVE_FLOAT_COMPLEX | H5T_NATIVE_DOUBLE_COMPLEX |
  *                      H5T_NATIVE_LDOUBLE_COMPLEX
  *   <complex_base_type> ::= <float>
@@ -4060,12 +4060,12 @@ filled according to the value of this property. The padding can be:
  * \snippet{doc} tables/predefinedDatatypes.dox predefined_ieee_datatypes_table
  * </div>
  *
- * \defgroup PDTCPLX Complex Number Datatypes
+ * \defgroup PDTCOMPLEX Complex Number Datatypes
  * \ingroup PDT
  * \details Complex number types consisting of 2 floating point values in big-
  *          and little-endian byte orders.
  * <div>
- * \snippet{doc} tables/predefinedDatatypes.dox predefined_cplx_datatypes_table
+ * \snippet{doc} tables/predefinedDatatypes.dox predefined_complex_datatypes_table
  * </div>
  *
  * \defgroup PDTSTD Standard Datatypes

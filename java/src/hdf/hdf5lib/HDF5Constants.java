@@ -1051,17 +1051,17 @@ public class HDF5Constants {
     /** */
     public static final int H5T_CONV_INIT = H5T_CONV_INIT();
     /** */
-    public static final long H5T_CPLX_IEEE_F16BE = H5T_CPLX_IEEE_F16BE();
+    public static final long H5T_COMPLEX_IEEE_F16BE = H5T_COMPLEX_IEEE_F16BE();
     /** */
-    public static final long H5T_CPLX_IEEE_F16LE = H5T_CPLX_IEEE_F16LE();
+    public static final long H5T_COMPLEX_IEEE_F16LE = H5T_COMPLEX_IEEE_F16LE();
     /** */
-    public static final long H5T_CPLX_IEEE_F32BE = H5T_CPLX_IEEE_F32BE();
+    public static final long H5T_COMPLEX_IEEE_F32BE = H5T_COMPLEX_IEEE_F32BE();
     /** */
-    public static final long H5T_CPLX_IEEE_F32LE = H5T_CPLX_IEEE_F32LE();
+    public static final long H5T_COMPLEX_IEEE_F32LE = H5T_COMPLEX_IEEE_F32LE();
     /** */
-    public static final long H5T_CPLX_IEEE_F64BE = H5T_CPLX_IEEE_F64BE();
+    public static final long H5T_COMPLEX_IEEE_F64BE = H5T_COMPLEX_IEEE_F64BE();
     /** */
-    public static final long H5T_CPLX_IEEE_F64LE = H5T_CPLX_IEEE_F64LE();
+    public static final long H5T_COMPLEX_IEEE_F64LE = H5T_COMPLEX_IEEE_F64LE();
     /** */
     public static final int H5T_CSET_ERROR = H5T_CSET_ERROR();
     /** */
@@ -2562,17 +2562,17 @@ public class HDF5Constants {
 
     private static native final int H5T_CONV_INIT();
 
-    private static native final long H5T_CPLX_IEEE_F16BE();
+    private static native final long H5T_COMPLEX_IEEE_F16BE();
 
-    private static native final long H5T_CPLX_IEEE_F16LE();
+    private static native final long H5T_COMPLEX_IEEE_F16LE();
 
-    private static native final long H5T_CPLX_IEEE_F32BE();
+    private static native final long H5T_COMPLEX_IEEE_F32BE();
 
-    private static native final long H5T_CPLX_IEEE_F32LE();
+    private static native final long H5T_COMPLEX_IEEE_F32LE();
 
-    private static native final long H5T_CPLX_IEEE_F64BE();
+    private static native final long H5T_COMPLEX_IEEE_F64BE();
 
-    private static native final long H5T_CPLX_IEEE_F64LE();
+    private static native final long H5T_COMPLEX_IEEE_F64LE();
 
     private static native final int H5T_CSET_ERROR();
 

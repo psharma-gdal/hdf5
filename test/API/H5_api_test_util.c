@@ -617,22 +617,22 @@ generate_random_datatype_complex(H5T_class_t H5_ATTR_UNUSED parent_class, bool H
 
     switch (rand() % NUM_PREDEFINED_COMPLEX_TYPES) {
         case 0:
-            type_to_copy = H5T_CPLX_IEEE_F16BE;
+            type_to_copy = H5T_COMPLEX_IEEE_F16BE;
             break;
         case 1:
-            type_to_copy = H5T_CPLX_IEEE_F16LE;
+            type_to_copy = H5T_COMPLEX_IEEE_F16LE;
             break;
         case 2:
-            type_to_copy = H5T_CPLX_IEEE_F32BE;
+            type_to_copy = H5T_COMPLEX_IEEE_F32BE;
             break;
         case 3:
-            type_to_copy = H5T_CPLX_IEEE_F32LE;
+            type_to_copy = H5T_COMPLEX_IEEE_F32LE;
             break;
         case 4:
-            type_to_copy = H5T_CPLX_IEEE_F64BE;
+            type_to_copy = H5T_COMPLEX_IEEE_F64BE;
             break;
         case 5:
-            type_to_copy = H5T_CPLX_IEEE_F64LE;
+            type_to_copy = H5T_COMPLEX_IEEE_F64LE;
             break;
         default:
             printf("    invalid value for complex number type; should not happen\n");

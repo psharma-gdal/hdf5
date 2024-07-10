@@ -69,14 +69,14 @@ GROUP "/" {
       }
    }
    ATTRIBUTE "complex" {
-      DATATYPE  H5T_CPLX_IEEE_F32LE
+      DATATYPE  H5T_COMPLEX_IEEE_F32LE
       DATASPACE  SIMPLE { ( 2 ) / ( 2 ) }
       DATA {
       (0): 1+2i, 3+4i
       }
    }
    ATTRIBUTE "complex2D" {
-      DATATYPE  H5T_CPLX_IEEE_F32LE
+      DATATYPE  H5T_COMPLEX_IEEE_F32LE
       DATASPACE  SIMPLE { ( 3, 2 ) / ( 3, 2 ) }
       DATA {
       (0,0): 1+2i, 3+4i,
@@ -85,7 +85,7 @@ GROUP "/" {
       }
    }
    ATTRIBUTE "complex3D" {
-      DATATYPE  H5T_CPLX_IEEE_F32LE
+      DATATYPE  H5T_COMPLEX_IEEE_F32LE
       DATASPACE  SIMPLE { ( 4, 3, 2 ) / ( 4, 3, 2 ) }
       DATA {
       (0,0,0): 1+2i, 3+4i,
@@ -569,14 +569,14 @@ GROUP "/" {
          }
       }
       ATTRIBUTE "complex" {
-         DATATYPE  H5T_CPLX_IEEE_F32LE
+         DATATYPE  H5T_COMPLEX_IEEE_F32LE
          DATASPACE  SIMPLE { ( 2 ) / ( 2 ) }
          DATA {
          (0): 1+2i, 3+4i
          }
       }
       ATTRIBUTE "complex2D" {
-         DATATYPE  H5T_CPLX_IEEE_F32LE
+         DATATYPE  H5T_COMPLEX_IEEE_F32LE
          DATASPACE  SIMPLE { ( 3, 2 ) / ( 3, 2 ) }
          DATA {
          (0,0): 1+2i, 3+4i,
@@ -585,7 +585,7 @@ GROUP "/" {
          }
       }
       ATTRIBUTE "complex3D" {
-         DATATYPE  H5T_CPLX_IEEE_F32LE
+         DATATYPE  H5T_COMPLEX_IEEE_F32LE
          DATASPACE  SIMPLE { ( 4, 3, 2 ) / ( 4, 3, 2 ) }
          DATA {
          (0,0,0): 1+2i, 3+4i,
@@ -1211,14 +1211,14 @@ GROUP "/" {
          }
       }
       ATTRIBUTE "complex" {
-         DATATYPE  H5T_CPLX_IEEE_F32LE
+         DATATYPE  H5T_COMPLEX_IEEE_F32LE
          DATASPACE  SIMPLE { ( 2 ) / ( 2 ) }
          DATA {
          (0): 1+2i, 3+4i
          }
       }
       ATTRIBUTE "complex2D" {
-         DATATYPE  H5T_CPLX_IEEE_F32LE
+         DATATYPE  H5T_COMPLEX_IEEE_F32LE
          DATASPACE  SIMPLE { ( 3, 2 ) / ( 3, 2 ) }
          DATA {
          (0,0): 1+2i, 3+4i,
@@ -1227,7 +1227,7 @@ GROUP "/" {
          }
       }
       ATTRIBUTE "complex3D" {
-         DATATYPE  H5T_CPLX_IEEE_F32LE
+         DATATYPE  H5T_COMPLEX_IEEE_F32LE
          DATASPACE  SIMPLE { ( 4, 3, 2 ) / ( 4, 3, 2 ) }
          DATA {
          (0,0,0): 1+2i, 3+4i,
@@ -1707,14 +1707,14 @@ GROUP "/" {
          }
       }
       DATASET "complex" {
-         DATATYPE  H5T_CPLX_IEEE_F32LE
+         DATATYPE  H5T_COMPLEX_IEEE_F32LE
          DATASPACE  SIMPLE { ( 2 ) / ( 2 ) }
          DATA {
          (0): 1+2i, 3+4i
          }
       }
       DATASET "complex2D" {
-         DATATYPE  H5T_CPLX_IEEE_F32LE
+         DATATYPE  H5T_COMPLEX_IEEE_F32LE
          DATASPACE  SIMPLE { ( 3, 2 ) / ( 3, 2 ) }
          DATA {
          (0,0): 1+2i, 3+4i,
@@ -1723,7 +1723,7 @@ GROUP "/" {
          }
       }
       DATASET "complex3D" {
-         DATATYPE  H5T_CPLX_IEEE_F32LE
+         DATATYPE  H5T_COMPLEX_IEEE_F32LE
          DATASPACE  SIMPLE { ( 4, 3, 2 ) / ( 4, 3, 2 ) }
          DATA {
          (0,0,0): 1+2i, 3+4i,

@@ -509,21 +509,21 @@ New Features
         not available (H5_HAVE_COMPLEX_NUMBERS is not defined), the macro will map
         to H5I_INVALID_HID and should not be used.
 
-        - H5T_CPLX_IEEE_F16LE / H5T_CPLX_IEEE_F16BE
+        - H5T_COMPLEX_IEEE_F16LE / H5T_COMPLEX_IEEE_F16BE
 
         These macros map to IDs of HDF5 datatypes representing a complex number of
         two parts, each of which is an IEEE 754 16-bit floating-point datatype in
         little- or big-endian order. These datatypes are available regardless of
         whether complex number support is available or not.
 
-        - H5T_CPLX_IEEE_F32LE / H5T_CPLX_IEEE_F32BE
+        - H5T_COMPLEX_IEEE_F32LE / H5T_COMPLEX_IEEE_F32BE
 
         These macros map to IDs of HDF5 datatypes representing a complex number of
         two parts, each of which is an IEEE 754 32-bit floating-point datatype in
         little- or big-endian order. These datatypes are available regardless of
         whether complex number support is available or not.
 
-        - H5T_CPLX_IEEE_F64LE / H5T_CPLX_IEEE_F64BE
+        - H5T_COMPLEX_IEEE_F64LE / H5T_COMPLEX_IEEE_F64BE
 
         These macros map to IDs of HDF5 datatypes representing a complex number of
         two parts, each of which is an IEEE 754 64-bit floating-point datatype in

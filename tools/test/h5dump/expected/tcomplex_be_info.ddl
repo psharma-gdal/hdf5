@@ -1,6 +1,6 @@
 HDF5 "tcomplex_be.h5" {
 DATASET "ArrayDatasetFloatComplex" {
-   DATATYPE  H5T_ARRAY { [10][10] H5T_CPLX_IEEE_F32BE }
+   DATATYPE  H5T_ARRAY { [10][10] H5T_COMPLEX_IEEE_F32BE }
    DATASPACE  SIMPLE { ( 1, 1 ) / ( 1, 1 ) }
    STORAGE_LAYOUT {
       CONTIGUOUS
@@ -20,7 +20,7 @@ DATASET "ArrayDatasetFloatComplex" {
 }
 DATASET "CompoundDatasetFloatComplex" {
    DATATYPE  H5T_COMPOUND {
-      H5T_CPLX_IEEE_F32BE "float_complex_mem";
+      H5T_COMPLEX_IEEE_F32BE "float_complex_mem";
    }
    DATASPACE  SIMPLE { ( 10, 10 ) / ( 10, 10 ) }
    STORAGE_LAYOUT {
@@ -40,7 +40,7 @@ DATASET "CompoundDatasetFloatComplex" {
    }
 }
 DATASET "DatasetDoubleComplex" {
-   DATATYPE  H5T_CPLX_IEEE_F64BE
+   DATATYPE  H5T_COMPLEX_IEEE_F64BE
    DATASPACE  SIMPLE { ( 10, 10 ) / ( 10, 10 ) }
    STORAGE_LAYOUT {
       CONTIGUOUS
@@ -59,7 +59,7 @@ DATASET "DatasetDoubleComplex" {
    }
 }
 DATASET "DatasetFloatComplex" {
-   DATATYPE  H5T_CPLX_IEEE_F32BE
+   DATATYPE  H5T_COMPLEX_IEEE_F32BE
    DATASPACE  SIMPLE { ( 10, 10 ) / ( 10, 10 ) }
    STORAGE_LAYOUT {
       CONTIGUOUS
@@ -77,12 +77,12 @@ DATASET "DatasetFloatComplex" {
       H5D_ALLOC_TIME_LATE
    }
    ATTRIBUTE "AttributeFloatComplex" {
-      DATATYPE  H5T_CPLX_IEEE_F32BE
+      DATATYPE  H5T_COMPLEX_IEEE_F32BE
       DATASPACE  SIMPLE { ( 1, 1 ) / ( 1, 1 ) }
    }
 }
 DATASET "VariableLengthDatasetFloatComplex" {
-   DATATYPE  H5T_VLEN { H5T_CPLX_IEEE_F32BE }
+   DATATYPE  H5T_VLEN { H5T_COMPLEX_IEEE_F32BE }
    DATASPACE  SIMPLE { ( 10 ) / ( 10 ) }
    STORAGE_LAYOUT {
       CONTIGUOUS

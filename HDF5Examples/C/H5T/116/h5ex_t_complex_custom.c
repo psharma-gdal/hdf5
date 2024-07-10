@@ -60,7 +60,7 @@ main(void)
      * type.  The HDF5 library automatically converts between different
      * complex number types.
      */
-    dset = H5Dcreate(file, DATASET, H5T_CPLX_IEEE_F64LE, space, H5P_DEFAULT, H5P_DEFAULT, H5P_DEFAULT);
+    dset = H5Dcreate(file, DATASET, H5T_COMPLEX_IEEE_F64LE, space, H5P_DEFAULT, H5P_DEFAULT, H5P_DEFAULT);
 
     /*
      * Create a datatype for writing to the dataset. This datatype is a

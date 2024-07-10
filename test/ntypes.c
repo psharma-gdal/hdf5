@@ -3208,8 +3208,8 @@ test_complex(hid_t file)
     if ((space = H5Screate_simple(2, dims, NULL)) < 0)
         TEST_ERROR;
 
-    if ((dataset = H5Dcreate2(file, DSET_COMPLEX_NAME, H5T_CPLX_IEEE_F32BE, space, H5P_DEFAULT, H5P_DEFAULT,
-                              H5P_DEFAULT)) < 0)
+    if ((dataset = H5Dcreate2(file, DSET_COMPLEX_NAME, H5T_COMPLEX_IEEE_F32BE, space, H5P_DEFAULT,
+                              H5P_DEFAULT, H5P_DEFAULT)) < 0)
         TEST_ERROR;
 
     /* Write the data to the dataset */
@@ -3233,7 +3233,7 @@ test_complex(hid_t file)
     /* Verify the datatype retrieved and converted */
     if (H5Tget_order(native_type) != H5Tget_order(H5T_NATIVE_FLOAT_COMPLEX))
         TEST_ERROR;
-    if (H5Tget_size(native_type) != H5Tget_size(H5T_CPLX_IEEE_F32BE))
+    if (H5Tget_size(native_type) != H5Tget_size(H5T_COMPLEX_IEEE_F32BE))
         TEST_ERROR;
     if (H5T_COMPLEX != H5Tget_class(native_type))
         TEST_ERROR;

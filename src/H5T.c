@@ -430,12 +430,12 @@ hid_t H5T_IEEE_F32LE_g = H5I_INVALID_HID;
 hid_t H5T_IEEE_F64BE_g = H5I_INVALID_HID;
 hid_t H5T_IEEE_F64LE_g = H5I_INVALID_HID;
 
-hid_t H5T_CPLX_IEEE_F16BE_g = H5I_INVALID_HID;
-hid_t H5T_CPLX_IEEE_F16LE_g = H5I_INVALID_HID;
-hid_t H5T_CPLX_IEEE_F32BE_g = H5I_INVALID_HID;
-hid_t H5T_CPLX_IEEE_F32LE_g = H5I_INVALID_HID;
-hid_t H5T_CPLX_IEEE_F64BE_g = H5I_INVALID_HID;
-hid_t H5T_CPLX_IEEE_F64LE_g = H5I_INVALID_HID;
+hid_t H5T_COMPLEX_IEEE_F16BE_g = H5I_INVALID_HID;
+hid_t H5T_COMPLEX_IEEE_F16LE_g = H5I_INVALID_HID;
+hid_t H5T_COMPLEX_IEEE_F32BE_g = H5I_INVALID_HID;
+hid_t H5T_COMPLEX_IEEE_F32LE_g = H5I_INVALID_HID;
+hid_t H5T_COMPLEX_IEEE_F64BE_g = H5I_INVALID_HID;
+hid_t H5T_COMPLEX_IEEE_F64LE_g = H5I_INVALID_HID;
 
 hid_t H5T_VAX_F32_g = H5I_INVALID_HID;
 hid_t H5T_VAX_F64_g = H5I_INVALID_HID;
@@ -1232,7 +1232,7 @@ H5T_init(void)
         HGOTO_ERROR(H5E_ARGS, H5E_BADTYPE, FAIL, "not a datatype object");
     if (NULL == (dt = H5T__complex_create(tmp_float)))
         HGOTO_ERROR(H5E_DATATYPE, H5E_CANTINIT, FAIL, "couldn't create complex number datatype");
-    if ((H5T_CPLX_IEEE_F16LE_g = H5I_register(H5I_DATATYPE, dt, false)) < 0)
+    if ((H5T_COMPLEX_IEEE_F16LE_g = H5I_register(H5I_DATATYPE, dt, false)) < 0)
         HGOTO_ERROR(H5E_DATATYPE, H5E_CANTREGISTER, FAIL, "unable to register datatype atom");
 
     /* Complex number of 2 IEEE 2-byte big-endian floats */
@@ -1240,7 +1240,7 @@ H5T_init(void)
         HGOTO_ERROR(H5E_ARGS, H5E_BADTYPE, FAIL, "not a datatype object");
     if (NULL == (dt = H5T__complex_create(tmp_float)))
         HGOTO_ERROR(H5E_DATATYPE, H5E_CANTINIT, FAIL, "couldn't create complex number datatype");
-    if ((H5T_CPLX_IEEE_F16BE_g = H5I_register(H5I_DATATYPE, dt, false)) < 0)
+    if ((H5T_COMPLEX_IEEE_F16BE_g = H5I_register(H5I_DATATYPE, dt, false)) < 0)
         HGOTO_ERROR(H5E_DATATYPE, H5E_CANTREGISTER, FAIL, "unable to register datatype atom");
 
     /* Complex number of 2 IEEE 4-byte little-endian floats */
@@ -1248,7 +1248,7 @@ H5T_init(void)
         HGOTO_ERROR(H5E_ARGS, H5E_BADTYPE, FAIL, "not a datatype object");
     if (NULL == (dt = H5T__complex_create(tmp_float)))
         HGOTO_ERROR(H5E_DATATYPE, H5E_CANTINIT, FAIL, "couldn't create complex number datatype");
-    if ((H5T_CPLX_IEEE_F32LE_g = H5I_register(H5I_DATATYPE, dt, false)) < 0)
+    if ((H5T_COMPLEX_IEEE_F32LE_g = H5I_register(H5I_DATATYPE, dt, false)) < 0)
         HGOTO_ERROR(H5E_DATATYPE, H5E_CANTREGISTER, FAIL, "unable to register datatype atom");
 
     /* Complex number of 2 IEEE 4-byte big-endian floats */
@@ -1256,7 +1256,7 @@ H5T_init(void)
         HGOTO_ERROR(H5E_ARGS, H5E_BADTYPE, FAIL, "not a datatype object");
     if (NULL == (dt = H5T__complex_create(tmp_float)))
         HGOTO_ERROR(H5E_DATATYPE, H5E_CANTINIT, FAIL, "couldn't create complex number datatype");
-    if ((H5T_CPLX_IEEE_F32BE_g = H5I_register(H5I_DATATYPE, dt, false)) < 0)
+    if ((H5T_COMPLEX_IEEE_F32BE_g = H5I_register(H5I_DATATYPE, dt, false)) < 0)
         HGOTO_ERROR(H5E_DATATYPE, H5E_CANTREGISTER, FAIL, "unable to register datatype atom");
 
     /* Complex number of 2 IEEE 8-byte little-endian floats */
@@ -1264,7 +1264,7 @@ H5T_init(void)
         HGOTO_ERROR(H5E_ARGS, H5E_BADTYPE, FAIL, "not a datatype object");
     if (NULL == (dt = H5T__complex_create(tmp_float)))
         HGOTO_ERROR(H5E_DATATYPE, H5E_CANTINIT, FAIL, "couldn't create complex number datatype");
-    if ((H5T_CPLX_IEEE_F64LE_g = H5I_register(H5I_DATATYPE, dt, false)) < 0)
+    if ((H5T_COMPLEX_IEEE_F64LE_g = H5I_register(H5I_DATATYPE, dt, false)) < 0)
         HGOTO_ERROR(H5E_DATATYPE, H5E_CANTREGISTER, FAIL, "unable to register datatype atom");
 
     /* Complex number of 2 IEEE 8-byte big-endian floats */
@@ -1272,7 +1272,7 @@ H5T_init(void)
         HGOTO_ERROR(H5E_ARGS, H5E_BADTYPE, FAIL, "not a datatype object");
     if (NULL == (dt = H5T__complex_create(tmp_float)))
         HGOTO_ERROR(H5E_DATATYPE, H5E_CANTINIT, FAIL, "couldn't create complex number datatype");
-    if ((H5T_CPLX_IEEE_F64BE_g = H5I_register(H5I_DATATYPE, dt, false)) < 0)
+    if ((H5T_COMPLEX_IEEE_F64BE_g = H5I_register(H5I_DATATYPE, dt, false)) < 0)
         HGOTO_ERROR(H5E_DATATYPE, H5E_CANTREGISTER, FAIL, "unable to register datatype atom");
 
     /*
@@ -2146,12 +2146,12 @@ H5T_top_term_package(void)
         H5T_IEEE_F64BE_g = H5I_INVALID_HID;
         H5T_IEEE_F64LE_g = H5I_INVALID_HID;
 
-        H5T_CPLX_IEEE_F16BE_g = H5I_INVALID_HID;
-        H5T_CPLX_IEEE_F16LE_g = H5I_INVALID_HID;
-        H5T_CPLX_IEEE_F32BE_g = H5I_INVALID_HID;
-        H5T_CPLX_IEEE_F32LE_g = H5I_INVALID_HID;
-        H5T_CPLX_IEEE_F64BE_g = H5I_INVALID_HID;
-        H5T_CPLX_IEEE_F64LE_g = H5I_INVALID_HID;
+        H5T_COMPLEX_IEEE_F16BE_g = H5I_INVALID_HID;
+        H5T_COMPLEX_IEEE_F16LE_g = H5I_INVALID_HID;
+        H5T_COMPLEX_IEEE_F32BE_g = H5I_INVALID_HID;
+        H5T_COMPLEX_IEEE_F32LE_g = H5I_INVALID_HID;
+        H5T_COMPLEX_IEEE_F64BE_g = H5I_INVALID_HID;
+        H5T_COMPLEX_IEEE_F64LE_g = H5I_INVALID_HID;
 
         H5T_STD_I8BE_g        = H5I_INVALID_HID;
         H5T_STD_I8LE_g        = H5I_INVALID_HID;

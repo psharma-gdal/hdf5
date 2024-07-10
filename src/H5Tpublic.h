@@ -292,41 +292,41 @@ H5_DLLVAR hid_t H5T_IEEE_F64LE_g;
  * Complex number types made up of IEEE floating point types
  */
 /**
- * \ingroup PDTCPLX
+ * \ingroup PDTCOMPLEX
  * Complex number of 2 16-bit little-endian IEEE floating-point numbers
  */
-#define H5T_CPLX_IEEE_F16BE (H5OPEN H5T_CPLX_IEEE_F16BE_g)
+#define H5T_COMPLEX_IEEE_F16BE (H5OPEN H5T_COMPLEX_IEEE_F16BE_g)
 /**
- * \ingroup PDTCPLX
+ * \ingroup PDTCOMPLEX
  * Complex number of 2 16-bit big-endian IEEE floating-point numbers
  */
-#define H5T_CPLX_IEEE_F16LE (H5OPEN H5T_CPLX_IEEE_F16LE_g)
+#define H5T_COMPLEX_IEEE_F16LE (H5OPEN H5T_COMPLEX_IEEE_F16LE_g)
 /**
- * \ingroup PDTCPLX
+ * \ingroup PDTCOMPLEX
  * Complex number of 2 32-bit big-endian IEEE floating-point numbers
  */
-#define H5T_CPLX_IEEE_F32BE (H5OPEN H5T_CPLX_IEEE_F32BE_g)
+#define H5T_COMPLEX_IEEE_F32BE (H5OPEN H5T_COMPLEX_IEEE_F32BE_g)
 /**
- * \ingroup PDTCPLX
+ * \ingroup PDTCOMPLEX
  * Complex number of 2 32-bit little-endian IEEE floating-point numbers
  */
-#define H5T_CPLX_IEEE_F32LE (H5OPEN H5T_CPLX_IEEE_F32LE_g)
+#define H5T_COMPLEX_IEEE_F32LE (H5OPEN H5T_COMPLEX_IEEE_F32LE_g)
 /**
- * \ingroup PDTCPLX
+ * \ingroup PDTCOMPLEX
  * Complex number of 2 64-bit big-endian IEEE floating-point numbers
  */
-#define H5T_CPLX_IEEE_F64BE (H5OPEN H5T_CPLX_IEEE_F64BE_g)
+#define H5T_COMPLEX_IEEE_F64BE (H5OPEN H5T_COMPLEX_IEEE_F64BE_g)
 /**
- * \ingroup PDTCPLX
+ * \ingroup PDTCOMPLEX
  * Complex number of 2 64-bit little-endian IEEE floating-point numbers
  */
-#define H5T_CPLX_IEEE_F64LE (H5OPEN H5T_CPLX_IEEE_F64LE_g)
-H5_DLLVAR hid_t H5T_CPLX_IEEE_F16BE_g;
-H5_DLLVAR hid_t H5T_CPLX_IEEE_F16LE_g;
-H5_DLLVAR hid_t H5T_CPLX_IEEE_F32BE_g;
-H5_DLLVAR hid_t H5T_CPLX_IEEE_F32LE_g;
-H5_DLLVAR hid_t H5T_CPLX_IEEE_F64BE_g;
-H5_DLLVAR hid_t H5T_CPLX_IEEE_F64LE_g;
+#define H5T_COMPLEX_IEEE_F64LE (H5OPEN H5T_COMPLEX_IEEE_F64LE_g)
+H5_DLLVAR hid_t H5T_COMPLEX_IEEE_F16BE_g;
+H5_DLLVAR hid_t H5T_COMPLEX_IEEE_F16LE_g;
+H5_DLLVAR hid_t H5T_COMPLEX_IEEE_F32BE_g;
+H5_DLLVAR hid_t H5T_COMPLEX_IEEE_F32LE_g;
+H5_DLLVAR hid_t H5T_COMPLEX_IEEE_F64BE_g;
+H5_DLLVAR hid_t H5T_COMPLEX_IEEE_F64LE_g;
 
 /*
  * These are "standard" types.  For instance, signed (2's complement) and

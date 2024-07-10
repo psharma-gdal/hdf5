@@ -1952,68 +1952,68 @@ test_complex(void)
         goto out;
 #endif
 
-    if ((dtype = H5LTtext_to_dtype("H5T_CPLX_IEEE_F16LE\n", H5LT_DDL)) < 0)
+    if ((dtype = H5LTtext_to_dtype("H5T_COMPLEX_IEEE_F16LE\n", H5LT_DDL)) < 0)
         goto out;
     if ((type_class = H5Tget_class(dtype)) < 0)
         goto out;
     if (type_class != H5T_COMPLEX)
         goto out;
-    if (!H5Tequal(dtype, H5T_CPLX_IEEE_F16LE))
+    if (!H5Tequal(dtype, H5T_COMPLEX_IEEE_F16LE))
         goto out;
     if (H5Tclose(dtype) < 0)
         goto out;
 
-    if ((dtype = H5LTtext_to_dtype("H5T_CPLX_IEEE_F16BE\n", H5LT_DDL)) < 0)
+    if ((dtype = H5LTtext_to_dtype("H5T_COMPLEX_IEEE_F16BE\n", H5LT_DDL)) < 0)
         goto out;
     if ((type_class = H5Tget_class(dtype)) < 0)
         goto out;
     if (type_class != H5T_COMPLEX)
         goto out;
-    if (!H5Tequal(dtype, H5T_CPLX_IEEE_F16BE))
+    if (!H5Tequal(dtype, H5T_COMPLEX_IEEE_F16BE))
         goto out;
     if (H5Tclose(dtype) < 0)
         goto out;
 
-    if ((dtype = H5LTtext_to_dtype("H5T_CPLX_IEEE_F32LE\n", H5LT_DDL)) < 0)
+    if ((dtype = H5LTtext_to_dtype("H5T_COMPLEX_IEEE_F32LE\n", H5LT_DDL)) < 0)
         goto out;
     if ((type_class = H5Tget_class(dtype)) < 0)
         goto out;
     if (type_class != H5T_COMPLEX)
         goto out;
-    if (!H5Tequal(dtype, H5T_CPLX_IEEE_F32LE))
+    if (!H5Tequal(dtype, H5T_COMPLEX_IEEE_F32LE))
         goto out;
     if (H5Tclose(dtype) < 0)
         goto out;
 
-    if ((dtype = H5LTtext_to_dtype("H5T_CPLX_IEEE_F32BE\n", H5LT_DDL)) < 0)
+    if ((dtype = H5LTtext_to_dtype("H5T_COMPLEX_IEEE_F32BE\n", H5LT_DDL)) < 0)
         goto out;
     if ((type_class = H5Tget_class(dtype)) < 0)
         goto out;
     if (type_class != H5T_COMPLEX)
         goto out;
-    if (!H5Tequal(dtype, H5T_CPLX_IEEE_F32BE))
+    if (!H5Tequal(dtype, H5T_COMPLEX_IEEE_F32BE))
         goto out;
     if (H5Tclose(dtype) < 0)
         goto out;
 
-    if ((dtype = H5LTtext_to_dtype("H5T_CPLX_IEEE_F64LE\n", H5LT_DDL)) < 0)
+    if ((dtype = H5LTtext_to_dtype("H5T_COMPLEX_IEEE_F64LE\n", H5LT_DDL)) < 0)
         goto out;
     if ((type_class = H5Tget_class(dtype)) < 0)
         goto out;
     if (type_class != H5T_COMPLEX)
         goto out;
-    if (!H5Tequal(dtype, H5T_CPLX_IEEE_F64LE))
+    if (!H5Tequal(dtype, H5T_COMPLEX_IEEE_F64LE))
         goto out;
     if (H5Tclose(dtype) < 0)
         goto out;
 
-    if ((dtype = H5LTtext_to_dtype("H5T_CPLX_IEEE_F64BE\n", H5LT_DDL)) < 0)
+    if ((dtype = H5LTtext_to_dtype("H5T_COMPLEX_IEEE_F64BE\n", H5LT_DDL)) < 0)
         goto out;
     if ((type_class = H5Tget_class(dtype)) < 0)
         goto out;
     if (type_class != H5T_COMPLEX)
         goto out;
-    if (!H5Tequal(dtype, H5T_CPLX_IEEE_F64BE))
+    if (!H5Tequal(dtype, H5T_COMPLEX_IEEE_F64BE))
         goto out;
     if (H5Tclose(dtype) < 0)
         goto out;
@@ -2024,7 +2024,7 @@ test_complex(void)
         goto out;
     if (type_class != H5T_COMPLEX)
         goto out;
-    if (!H5Tequal(dtype, H5T_CPLX_IEEE_F16LE))
+    if (!H5Tequal(dtype, H5T_COMPLEX_IEEE_F16LE))
         goto out;
     if (H5Tclose(dtype) < 0)
         goto out;
@@ -2035,7 +2035,7 @@ test_complex(void)
         goto out;
     if (type_class != H5T_COMPLEX)
         goto out;
-    if (!H5Tequal(dtype, H5T_CPLX_IEEE_F16BE))
+    if (!H5Tequal(dtype, H5T_COMPLEX_IEEE_F16BE))
         goto out;
     if (H5Tclose(dtype) < 0)
         goto out;
@@ -2046,7 +2046,7 @@ test_complex(void)
         goto out;
     if (type_class != H5T_COMPLEX)
         goto out;
-    if (!H5Tequal(dtype, H5T_CPLX_IEEE_F32LE))
+    if (!H5Tequal(dtype, H5T_COMPLEX_IEEE_F32LE))
         goto out;
     if (H5Tclose(dtype) < 0)
         goto out;
@@ -2057,7 +2057,7 @@ test_complex(void)
         goto out;
     if (type_class != H5T_COMPLEX)
         goto out;
-    if (!H5Tequal(dtype, H5T_CPLX_IEEE_F32BE))
+    if (!H5Tequal(dtype, H5T_COMPLEX_IEEE_F32BE))
         goto out;
     if (H5Tclose(dtype) < 0)
         goto out;
@@ -2068,7 +2068,7 @@ test_complex(void)
         goto out;
     if (type_class != H5T_COMPLEX)
         goto out;
-    if (!H5Tequal(dtype, H5T_CPLX_IEEE_F64LE))
+    if (!H5Tequal(dtype, H5T_COMPLEX_IEEE_F64LE))
         goto out;
     if (H5Tclose(dtype) < 0)
         goto out;
@@ -2079,7 +2079,7 @@ test_complex(void)
         goto out;
     if (type_class != H5T_COMPLEX)
         goto out;
-    if (!H5Tequal(dtype, H5T_CPLX_IEEE_F64BE))
+    if (!H5Tequal(dtype, H5T_COMPLEX_IEEE_F64BE))
         goto out;
     if (H5Tclose(dtype) < 0)
         goto out;

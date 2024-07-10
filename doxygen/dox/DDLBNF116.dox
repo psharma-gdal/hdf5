@@ -171,9 +171,9 @@ This section contains a brief explanation of the symbols used in the DDL.
 <enum_val> ::= <int_value>
 
 <complex_type> ::= H5T_COMPLEX { <complex_base_type> <complex_base_type> } |
-                   H5T_CPLX_IEEE_F16BE | H5T_CPLX_IEEE_F16LE |
-                   H5T_CPLX_IEEE_F32BE | H5T_CPLX_IEEE_F32LE |
-                   H5T_CPLX_IEEE_F64BE | H5T_CPLX_IEEE_F64LE |
+                   H5T_COMPLEX_IEEE_F16BE   | H5T_COMPLEX_IEEE_F16LE    |
+                   H5T_COMPLEX_IEEE_F32BE   | H5T_COMPLEX_IEEE_F32LE    |
+                   H5T_COMPLEX_IEEE_F64BE   | H5T_COMPLEX_IEEE_F64LE    |
                    H5T_NATIVE_FLOAT_COMPLEX | H5T_NATIVE_DOUBLE_COMPLEX |
                    H5T_NATIVE_LDOUBLE_COMPLEX
 

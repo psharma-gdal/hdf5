@@ -1687,18 +1687,18 @@ H5_trace_args(H5RS_str_t *rs, const char *type, va_list ap)
                                     H5RS_acat(rs, "H5T_IEEE_F64BE");
                                 else if (obj == H5T_IEEE_F64LE_g)
                                     H5RS_acat(rs, "H5T_IEEE_F64LE");
-                                else if (obj == H5T_CPLX_IEEE_F16BE_g)
-                                    H5RS_acat(rs, "H5T_CPLX_IEEE_F16BE");
-                                else if (obj == H5T_CPLX_IEEE_F16LE_g)
-                                    H5RS_acat(rs, "H5T_CPLX_IEEE_F16LE");
-                                else if (obj == H5T_CPLX_IEEE_F32BE_g)
-                                    H5RS_acat(rs, "H5T_CPLX_IEEE_F32BE");
-                                else if (obj == H5T_CPLX_IEEE_F32LE_g)
-                                    H5RS_acat(rs, "H5T_CPLX_IEEE_F32LE");
-                                else if (obj == H5T_CPLX_IEEE_F64BE_g)
-                                    H5RS_acat(rs, "H5T_CPLX_IEEE_F64BE");
-                                else if (obj == H5T_CPLX_IEEE_F64LE_g)
-                                    H5RS_acat(rs, "H5T_CPLX_IEEE_F64LE");
+                                else if (obj == H5T_COMPLEX_IEEE_F16BE_g)
+                                    H5RS_acat(rs, "H5T_COMPLEX_IEEE_F16BE");
+                                else if (obj == H5T_COMPLEX_IEEE_F16LE_g)
+                                    H5RS_acat(rs, "H5T_COMPLEX_IEEE_F16LE");
+                                else if (obj == H5T_COMPLEX_IEEE_F32BE_g)
+                                    H5RS_acat(rs, "H5T_COMPLEX_IEEE_F32BE");
+                                else if (obj == H5T_COMPLEX_IEEE_F32LE_g)
+                                    H5RS_acat(rs, "H5T_COMPLEX_IEEE_F32LE");
+                                else if (obj == H5T_COMPLEX_IEEE_F64BE_g)
+                                    H5RS_acat(rs, "H5T_COMPLEX_IEEE_F64BE");
+                                else if (obj == H5T_COMPLEX_IEEE_F64LE_g)
+                                    H5RS_acat(rs, "H5T_COMPLEX_IEEE_F64LE");
                                 else if (obj == H5T_STD_I8BE_g)
                                     H5RS_acat(rs, "H5T_STD_I8BE");
                                 else if (obj == H5T_STD_I8LE_g)

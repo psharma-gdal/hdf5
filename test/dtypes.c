@@ -417,41 +417,41 @@ test_detect(void)
     /*--------------------------------------------------------------------------------
      *  Test class of complex number types.
      *------------------------------------------------------------------------------*/
-    if (H5Tdetect_class(H5T_CPLX_IEEE_F16LE, H5T_COMPLEX) != true)
+    if (H5Tdetect_class(H5T_COMPLEX_IEEE_F16LE, H5T_COMPLEX) != true)
         TEST_ERROR;
-    if (H5Tdetect_class(H5T_CPLX_IEEE_F16BE, H5T_COMPLEX) != true)
+    if (H5Tdetect_class(H5T_COMPLEX_IEEE_F16BE, H5T_COMPLEX) != true)
         TEST_ERROR;
-    if (H5Tdetect_class(H5T_CPLX_IEEE_F32LE, H5T_COMPLEX) != true)
+    if (H5Tdetect_class(H5T_COMPLEX_IEEE_F32LE, H5T_COMPLEX) != true)
         TEST_ERROR;
-    if (H5Tdetect_class(H5T_CPLX_IEEE_F32BE, H5T_COMPLEX) != true)
+    if (H5Tdetect_class(H5T_COMPLEX_IEEE_F32BE, H5T_COMPLEX) != true)
         TEST_ERROR;
-    if (H5Tdetect_class(H5T_CPLX_IEEE_F64LE, H5T_COMPLEX) != true)
+    if (H5Tdetect_class(H5T_COMPLEX_IEEE_F64LE, H5T_COMPLEX) != true)
         TEST_ERROR;
-    if (H5Tdetect_class(H5T_CPLX_IEEE_F64BE, H5T_COMPLEX) != true)
+    if (H5Tdetect_class(H5T_COMPLEX_IEEE_F64BE, H5T_COMPLEX) != true)
         TEST_ERROR;
-    if (H5Tdetect_class(H5T_CPLX_IEEE_F16LE, H5T_FLOAT) != true)
+    if (H5Tdetect_class(H5T_COMPLEX_IEEE_F16LE, H5T_FLOAT) != true)
         TEST_ERROR;
-    if (H5Tdetect_class(H5T_CPLX_IEEE_F16BE, H5T_FLOAT) != true)
+    if (H5Tdetect_class(H5T_COMPLEX_IEEE_F16BE, H5T_FLOAT) != true)
         TEST_ERROR;
-    if (H5Tdetect_class(H5T_CPLX_IEEE_F32LE, H5T_FLOAT) != true)
+    if (H5Tdetect_class(H5T_COMPLEX_IEEE_F32LE, H5T_FLOAT) != true)
         TEST_ERROR;
-    if (H5Tdetect_class(H5T_CPLX_IEEE_F32BE, H5T_FLOAT) != true)
+    if (H5Tdetect_class(H5T_COMPLEX_IEEE_F32BE, H5T_FLOAT) != true)
         TEST_ERROR;
-    if (H5Tdetect_class(H5T_CPLX_IEEE_F64LE, H5T_FLOAT) != true)
+    if (H5Tdetect_class(H5T_COMPLEX_IEEE_F64LE, H5T_FLOAT) != true)
         TEST_ERROR;
-    if (H5Tdetect_class(H5T_CPLX_IEEE_F64BE, H5T_FLOAT) != true)
+    if (H5Tdetect_class(H5T_COMPLEX_IEEE_F64BE, H5T_FLOAT) != true)
         TEST_ERROR;
-    if (H5Tdetect_class(H5T_CPLX_IEEE_F16LE, H5T_INTEGER) == true)
+    if (H5Tdetect_class(H5T_COMPLEX_IEEE_F16LE, H5T_INTEGER) == true)
         TEST_ERROR;
-    if (H5Tdetect_class(H5T_CPLX_IEEE_F16BE, H5T_INTEGER) == true)
+    if (H5Tdetect_class(H5T_COMPLEX_IEEE_F16BE, H5T_INTEGER) == true)
         TEST_ERROR;
-    if (H5Tdetect_class(H5T_CPLX_IEEE_F32LE, H5T_INTEGER) == true)
+    if (H5Tdetect_class(H5T_COMPLEX_IEEE_F32LE, H5T_INTEGER) == true)
         TEST_ERROR;
-    if (H5Tdetect_class(H5T_CPLX_IEEE_F32BE, H5T_INTEGER) == true)
+    if (H5Tdetect_class(H5T_COMPLEX_IEEE_F32BE, H5T_INTEGER) == true)
         TEST_ERROR;
-    if (H5Tdetect_class(H5T_CPLX_IEEE_F64LE, H5T_INTEGER) == true)
+    if (H5Tdetect_class(H5T_COMPLEX_IEEE_F64LE, H5T_INTEGER) == true)
         TEST_ERROR;
-    if (H5Tdetect_class(H5T_CPLX_IEEE_F64BE, H5T_INTEGER) == true)
+    if (H5Tdetect_class(H5T_COMPLEX_IEEE_F64BE, H5T_INTEGER) == true)
         TEST_ERROR;
 #ifdef H5_HAVE_COMPLEX_NUMBERS
     if (H5Tdetect_class(H5T_NATIVE_FLOAT_COMPLEX, H5T_COMPLEX) != true)
@@ -6818,40 +6818,40 @@ test_complex_type(void)
     /*
      * Check that standard macros map to valid types
      */
-    type_size = H5Tget_size(H5T_CPLX_IEEE_F16BE);
+    type_size = H5Tget_size(H5T_COMPLEX_IEEE_F16BE);
     if (0 == type_size) {
         H5_FAILED();
-        printf("Invalid size for H5T_CPLX_IEEE_F16BE datatype\n");
+        printf("Invalid size for H5T_COMPLEX_IEEE_F16BE datatype\n");
         goto error;
     }
-    type_size = H5Tget_size(H5T_CPLX_IEEE_F16LE);
+    type_size = H5Tget_size(H5T_COMPLEX_IEEE_F16LE);
     if (0 == type_size) {
         H5_FAILED();
-        printf("Invalid size for H5T_CPLX_IEEE_F16LE datatype\n");
+        printf("Invalid size for H5T_COMPLEX_IEEE_F16LE datatype\n");
         goto error;
     }
-    type_size = H5Tget_size(H5T_CPLX_IEEE_F32BE);
+    type_size = H5Tget_size(H5T_COMPLEX_IEEE_F32BE);
     if (0 == type_size) {
         H5_FAILED();
-        printf("Invalid size for H5T_CPLX_IEEE_F32BE datatype\n");
+        printf("Invalid size for H5T_COMPLEX_IEEE_F32BE datatype\n");
         goto error;
     }
-    type_size = H5Tget_size(H5T_CPLX_IEEE_F32LE);
+    type_size = H5Tget_size(H5T_COMPLEX_IEEE_F32LE);
     if (0 == type_size) {
         H5_FAILED();
-        printf("Invalid size for H5T_CPLX_IEEE_F32LE datatype\n");
+        printf("Invalid size for H5T_COMPLEX_IEEE_F32LE datatype\n");
         goto error;
     }
-    type_size = H5Tget_size(H5T_CPLX_IEEE_F64BE);
+    type_size = H5Tget_size(H5T_COMPLEX_IEEE_F64BE);
     if (0 == type_size) {
         H5_FAILED();
-        printf("Invalid size for H5T_CPLX_IEEE_F64BE datatype\n");
+        printf("Invalid size for H5T_COMPLEX_IEEE_F64BE datatype\n");
         goto error;
     }
-    type_size = H5Tget_size(H5T_CPLX_IEEE_F64LE);
+    type_size = H5Tget_size(H5T_COMPLEX_IEEE_F64LE);
     if (0 == type_size) {
         H5_FAILED();
-        printf("Invalid size for H5T_CPLX_IEEE_F64LE datatype\n");
+        printf("Invalid size for H5T_COMPLEX_IEEE_F64LE datatype\n");
         goto error;
     }
 
@@ -7190,7 +7190,7 @@ test_complex_type(void)
         }
 
         /* Make sure this type matches predefined type */
-        if (0 == H5Tequal(complex_type, H5T_CPLX_IEEE_F32LE)) {
+        if (0 == H5Tequal(complex_type, H5T_COMPLEX_IEEE_F32LE)) {
             H5_FAILED();
             printf("Derived complex number type didn't match predefined type\n");
             goto error;
@@ -7204,7 +7204,7 @@ test_complex_type(void)
         }
 
         /* Make sure this type matches predefined type */
-        if (0 == H5Tequal(complex_type, H5T_CPLX_IEEE_F32BE)) {
+        if (0 == H5Tequal(complex_type, H5T_COMPLEX_IEEE_F32BE)) {
             H5_FAILED();
             printf("Derived complex number type didn't match predefined type\n");
             goto error;
@@ -7469,12 +7469,12 @@ test_complex_type_conv_funcs(void)
      * covered by H5T__conv_order. They shouldn't be covered by H5T__conv_order_opt
      * (at least not yet).
      */
-    if (NULL == (complex_le = H5I_object_verify(H5T_CPLX_IEEE_F32LE, H5I_DATATYPE))) {
+    if (NULL == (complex_le = H5I_object_verify(H5T_COMPLEX_IEEE_F32LE, H5I_DATATYPE))) {
         H5_FAILED();
         printf("Can't get H5T_t structure for datatype\n");
         goto error;
     }
-    if (NULL == (complex_be = H5I_object_verify(H5T_CPLX_IEEE_F32BE, H5I_DATATYPE))) {
+    if (NULL == (complex_be = H5I_object_verify(H5T_COMPLEX_IEEE_F32BE, H5I_DATATYPE))) {
         H5_FAILED();
         printf("Can't get H5T_t structure for datatype\n");
         goto error;
@@ -7487,7 +7487,7 @@ test_complex_type_conv_funcs(void)
     }
     if (conv_path->conv.u.lib_func != H5T__conv_order) {
         H5_FAILED();
-        printf("Conversion path for H5T_CPLX_IEEE_F32LE -> H5T_CPLX_IEEE_F32BE was not a byte-swap "
+        printf("Conversion path for H5T_COMPLEX_IEEE_F32LE -> H5T_COMPLEX_IEEE_F32BE was not a byte-swap "
                "conversion\n");
         goto error;
     }
@@ -7499,7 +7499,7 @@ test_complex_type_conv_funcs(void)
     }
     if (conv_path->conv.u.lib_func != H5T__conv_order) {
         H5_FAILED();
-        printf("Conversion path for H5T_CPLX_IEEE_F32BE -> H5T_CPLX_IEEE_F32LE was not a byte-swap "
+        printf("Conversion path for H5T_COMPLEX_IEEE_F32BE -> H5T_COMPLEX_IEEE_F32LE was not a byte-swap "
                "conversion\n");
         goto error;
     }
@@ -7661,9 +7661,9 @@ test_complex_type_conv_funcs(void)
      * types are library soft conversions
      */
     if (native_order == H5T_ORDER_LE)
-        conv_type = H5T_CPLX_IEEE_F16LE;
+        conv_type = H5T_COMPLEX_IEEE_F16LE;
     else
-        conv_type = H5T_CPLX_IEEE_F16BE;
+        conv_type = H5T_COMPLEX_IEEE_F16BE;
     if (!H5Tequal(conv_type, H5T_NATIVE_FLOAT_COMPLEX) && !H5Tequal(conv_type, H5T_NATIVE_DOUBLE_COMPLEX) &&
         !H5Tequal(conv_type, H5T_NATIVE_LDOUBLE_COMPLEX)) {
         CHECK_LIB_SOFT_CONV(conv_type, H5T_NATIVE_SCHAR);
@@ -7708,9 +7708,9 @@ test_complex_type_conv_funcs(void)
     }
 
     if (native_order == H5T_ORDER_LE)
-        conv_type = H5T_CPLX_IEEE_F32LE;
+        conv_type = H5T_COMPLEX_IEEE_F32LE;
     else
-        conv_type = H5T_CPLX_IEEE_F32BE;
+        conv_type = H5T_COMPLEX_IEEE_F32BE;
     if (!H5Tequal(conv_type, H5T_NATIVE_FLOAT_COMPLEX) && !H5Tequal(conv_type, H5T_NATIVE_DOUBLE_COMPLEX) &&
         !H5Tequal(conv_type, H5T_NATIVE_LDOUBLE_COMPLEX)) {
         CHECK_LIB_SOFT_CONV(conv_type, H5T_NATIVE_SCHAR);
@@ -7755,9 +7755,9 @@ test_complex_type_conv_funcs(void)
     }
 
     if (native_order == H5T_ORDER_LE)
-        conv_type = H5T_CPLX_IEEE_F64LE;
+        conv_type = H5T_COMPLEX_IEEE_F64LE;
     else
-        conv_type = H5T_CPLX_IEEE_F64BE;
+        conv_type = H5T_COMPLEX_IEEE_F64BE;
     if (!H5Tequal(conv_type, H5T_NATIVE_FLOAT_COMPLEX) && !H5Tequal(conv_type, H5T_NATIVE_DOUBLE_COMPLEX) &&
         !H5Tequal(conv_type, H5T_NATIVE_LDOUBLE_COMPLEX)) {
         CHECK_LIB_SOFT_CONV(conv_type, H5T_NATIVE_SCHAR);

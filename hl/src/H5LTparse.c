@@ -223,12 +223,12 @@ enum yysymbol_kind_t
   YYSYMBOL_H5T_NATIVE_FLOAT_TOKEN = 37,    /* H5T_NATIVE_FLOAT_TOKEN  */
   YYSYMBOL_H5T_NATIVE_DOUBLE_TOKEN = 38,   /* H5T_NATIVE_DOUBLE_TOKEN  */
   YYSYMBOL_H5T_NATIVE_LDOUBLE_TOKEN = 39,  /* H5T_NATIVE_LDOUBLE_TOKEN  */
-  YYSYMBOL_H5T_CPLX_IEEE_F16BE_TOKEN = 40, /* H5T_CPLX_IEEE_F16BE_TOKEN  */
-  YYSYMBOL_H5T_CPLX_IEEE_F16LE_TOKEN = 41, /* H5T_CPLX_IEEE_F16LE_TOKEN  */
-  YYSYMBOL_H5T_CPLX_IEEE_F32BE_TOKEN = 42, /* H5T_CPLX_IEEE_F32BE_TOKEN  */
-  YYSYMBOL_H5T_CPLX_IEEE_F32LE_TOKEN = 43, /* H5T_CPLX_IEEE_F32LE_TOKEN  */
-  YYSYMBOL_H5T_CPLX_IEEE_F64BE_TOKEN = 44, /* H5T_CPLX_IEEE_F64BE_TOKEN  */
-  YYSYMBOL_H5T_CPLX_IEEE_F64LE_TOKEN = 45, /* H5T_CPLX_IEEE_F64LE_TOKEN  */
+  YYSYMBOL_H5T_COMPLEX_IEEE_F16BE_TOKEN = 40, /* H5T_COMPLEX_IEEE_F16BE_TOKEN  */
+  YYSYMBOL_H5T_COMPLEX_IEEE_F16LE_TOKEN = 41, /* H5T_COMPLEX_IEEE_F16LE_TOKEN  */
+  YYSYMBOL_H5T_COMPLEX_IEEE_F32BE_TOKEN = 42, /* H5T_COMPLEX_IEEE_F32BE_TOKEN  */
+  YYSYMBOL_H5T_COMPLEX_IEEE_F32LE_TOKEN = 43, /* H5T_COMPLEX_IEEE_F32LE_TOKEN  */
+  YYSYMBOL_H5T_COMPLEX_IEEE_F64BE_TOKEN = 44, /* H5T_COMPLEX_IEEE_F64BE_TOKEN  */
+  YYSYMBOL_H5T_COMPLEX_IEEE_F64LE_TOKEN = 45, /* H5T_COMPLEX_IEEE_F64LE_TOKEN  */
   YYSYMBOL_H5T_NATIVE_FLOAT_COMPLEX_TOKEN = 46, /* H5T_NATIVE_FLOAT_COMPLEX_TOKEN  */
   YYSYMBOL_H5T_NATIVE_DOUBLE_COMPLEX_TOKEN = 47, /* H5T_NATIVE_DOUBLE_COMPLEX_TOKEN  */
   YYSYMBOL_H5T_NATIVE_LDOUBLE_COMPLEX_TOKEN = 48, /* H5T_NATIVE_LDOUBLE_COMPLEX_TOKEN  */
@@ -739,9 +739,9 @@ static const char *const yytname[] =
   "H5T_IEEE_F64BE_TOKEN", "H5T_IEEE_F64LE_TOKEN",
   "H5T_NATIVE_FLOAT16_TOKEN", "H5T_NATIVE_FLOAT_TOKEN",
   "H5T_NATIVE_DOUBLE_TOKEN", "H5T_NATIVE_LDOUBLE_TOKEN",
-  "H5T_CPLX_IEEE_F16BE_TOKEN", "H5T_CPLX_IEEE_F16LE_TOKEN",
-  "H5T_CPLX_IEEE_F32BE_TOKEN", "H5T_CPLX_IEEE_F32LE_TOKEN",
-  "H5T_CPLX_IEEE_F64BE_TOKEN", "H5T_CPLX_IEEE_F64LE_TOKEN",
+  "H5T_COMPLEX_IEEE_F16BE_TOKEN", "H5T_COMPLEX_IEEE_F16LE_TOKEN",
+  "H5T_COMPLEX_IEEE_F32BE_TOKEN", "H5T_COMPLEX_IEEE_F32LE_TOKEN",
+  "H5T_COMPLEX_IEEE_F64BE_TOKEN", "H5T_COMPLEX_IEEE_F64LE_TOKEN",
   "H5T_NATIVE_FLOAT_COMPLEX_TOKEN", "H5T_NATIVE_DOUBLE_COMPLEX_TOKEN",
   "H5T_NATIVE_LDOUBLE_COMPLEX_TOKEN", "H5T_STRING_TOKEN", "STRSIZE_TOKEN",
   "STRPAD_TOKEN", "CSET_TOKEN", "CTYPE_TOKEN", "H5T_VARIABLE_TOKEN",
@@ -1790,39 +1790,39 @@ yyreduce:
 #line 1760 "hl/src//H5LTparse.c"
     break;
 
-  case 73: /* complex_type: H5T_CPLX_IEEE_F16LE_TOKEN  */
+  case 73: /* complex_type: H5T_COMPLEX_IEEE_F16LE_TOKEN  */
 #line 258 "hl/src//H5LTparse.y"
-                                                   { (yyval.hid) = H5Tcopy(H5T_CPLX_IEEE_F16LE); }
+                                                      { (yyval.hid) = H5Tcopy(H5T_COMPLEX_IEEE_F16LE); }
 #line 1766 "hl/src//H5LTparse.c"
     break;
 
-  case 74: /* complex_type: H5T_CPLX_IEEE_F16BE_TOKEN  */
+  case 74: /* complex_type: H5T_COMPLEX_IEEE_F16BE_TOKEN  */
 #line 259 "hl/src//H5LTparse.y"
-                                                   { (yyval.hid) = H5Tcopy(H5T_CPLX_IEEE_F16BE); }
+                                                      { (yyval.hid) = H5Tcopy(H5T_COMPLEX_IEEE_F16BE); }
 #line 1772 "hl/src//H5LTparse.c"
     break;
 
-  case 75: /* complex_type: H5T_CPLX_IEEE_F32LE_TOKEN  */
+  case 75: /* complex_type: H5T_COMPLEX_IEEE_F32LE_TOKEN  */
 #line 260 "hl/src//H5LTparse.y"
-                                                   { (yyval.hid) = H5Tcopy(H5T_CPLX_IEEE_F32LE); }
+                                                      { (yyval.hid) = H5Tcopy(H5T_COMPLEX_IEEE_F32LE); }
 #line 1778 "hl/src//H5LTparse.c"
     break;
 
-  case 76: /* complex_type: H5T_CPLX_IEEE_F32BE_TOKEN  */
+  case 76: /* complex_type: H5T_COMPLEX_IEEE_F32BE_TOKEN  */
 #line 261 "hl/src//H5LTparse.y"
-                                                   { (yyval.hid) = H5Tcopy(H5T_CPLX_IEEE_F32BE); }
+                                                      { (yyval.hid) = H5Tcopy(H5T_COMPLEX_IEEE_F32BE); }
 #line 1784 "hl/src//H5LTparse.c"
     break;
 
-  case 77: /* complex_type: H5T_CPLX_IEEE_F64LE_TOKEN  */
+  case 77: /* complex_type: H5T_COMPLEX_IEEE_F64LE_TOKEN  */
 #line 262 "hl/src//H5LTparse.y"
-                                                   { (yyval.hid) = H5Tcopy(H5T_CPLX_IEEE_F64LE); }
+                                                      { (yyval.hid) = H5Tcopy(H5T_COMPLEX_IEEE_F64LE); }
 #line 1790 "hl/src//H5LTparse.c"
     break;
 
-  case 78: /* complex_type: H5T_CPLX_IEEE_F64BE_TOKEN  */
+  case 78: /* complex_type: H5T_COMPLEX_IEEE_F64BE_TOKEN  */
 #line 263 "hl/src//H5LTparse.y"
-                                                   { (yyval.hid) = H5Tcopy(H5T_CPLX_IEEE_F64BE); }
+                                                      { (yyval.hid) = H5Tcopy(H5T_COMPLEX_IEEE_F64BE); }
 #line 1796 "hl/src//H5LTparse.c"
     break;
 

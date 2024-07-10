@@ -35,7 +35,7 @@
 //! [predefined_ieee_datatypes_table]
  *
  *
-//! [predefined_cplx_datatypes_table]
+//! [predefined_complex_datatypes_table]
 <table>
 <caption>Predefined Complex Number Datatypes</caption>
 <tr>
@@ -43,31 +43,31 @@
 <th>Description</th>
 </tr>
 <tr>
-<td>#H5T_CPLX_IEEE_F16BE</td>
+<td>#H5T_COMPLEX_IEEE_F16BE</td>
 <td>Complex number of 2 16-bit big-endian IEEE floating point numbers</td>
 </tr>
 <tr>
-<td>#H5T_CPLX_IEEE_F16LE</td>
+<td>#H5T_COMPLEX_IEEE_F16LE</td>
 <td>Complex number of 2 16-bit little-endian IEEE floating point numbers</td>
 </tr>
 <tr>
-<td>#H5T_CPLX_IEEE_F32BE</td>
+<td>#H5T_COMPLEX_IEEE_F32BE</td>
 <td>Complex number of 2 32-bit big-endian IEEE floating point numbers</td>
 </tr>
 <tr>
-<td>#H5T_CPLX_IEEE_F32LE</td>
+<td>#H5T_COMPLEX_IEEE_F32LE</td>
 <td>Complex number of 2 32-bit little-endian IEEE floating point numbers</td>
 </tr>
 <tr>
-<td>#H5T_CPLX_IEEE_F64BE</td>
+<td>#H5T_COMPLEX_IEEE_F64BE</td>
 <td>Complex number of 2 64-bit big-endian IEEE floating point numbers</td>
 </tr>
 <tr>
-<td>#H5T_CPLX_IEEE_F64LE</td>
+<td>#H5T_COMPLEX_IEEE_F64LE</td>
 <td>Complex number of 2 64-bit little-endian IEEE floating point numbers</td>
 </tr>
 </table>
-//! [predefined_cplx_datatypes_table]
+//! [predefined_complex_datatypes_table]
  *
  *
 //! [predefined_std_datatypes_table]

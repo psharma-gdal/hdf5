@@ -12296,7 +12296,7 @@ gent_complex(void)
     /* float complex dataset */
     H5Pset_fill_value(dcpl_id, H5T_NATIVE_FLOAT_COMPLEX, &fc_fillval);
 
-    dataset = H5Dcreate2(fid, F95_DSET_FC, H5T_CPLX_IEEE_F32LE, space, H5P_DEFAULT, dcpl_id, H5P_DEFAULT);
+    dataset = H5Dcreate2(fid, F95_DSET_FC, H5T_COMPLEX_IEEE_F32LE, space, H5P_DEFAULT, dcpl_id, H5P_DEFAULT);
 
     dset_fc = malloc(sizeof(*dset_fc));
 
@@ -12320,7 +12320,7 @@ gent_complex(void)
     /* Create a float complex attribute on the dataset with a single value */
     single_space = H5Screate_simple(2, single_dims, NULL);
 
-    attr = H5Acreate2(dataset, F95_ATTR_FC, H5T_CPLX_IEEE_F32LE, single_space, H5P_DEFAULT, H5P_DEFAULT);
+    attr = H5Acreate2(dataset, F95_ATTR_FC, H5T_COMPLEX_IEEE_F32LE, single_space, H5P_DEFAULT, H5P_DEFAULT);
 
     H5Awrite(attr, H5T_NATIVE_FLOAT_COMPLEX, &fc_fillval);
 
@@ -12331,7 +12331,7 @@ gent_complex(void)
     /* double complex dataset */
     H5Pset_fill_value(dcpl_id, H5T_NATIVE_DOUBLE_COMPLEX, &dc_fillval);
 
-    dataset = H5Dcreate2(fid, F95_DSET_DC, H5T_CPLX_IEEE_F64LE, space, H5P_DEFAULT, dcpl_id, H5P_DEFAULT);
+    dataset = H5Dcreate2(fid, F95_DSET_DC, H5T_COMPLEX_IEEE_F64LE, space, H5P_DEFAULT, dcpl_id, H5P_DEFAULT);
 
     dset_dc = malloc(sizeof(*dset_dc));
 
@@ -12395,8 +12395,8 @@ gent_complex(void)
     mem_tid = H5Tcreate(H5T_COMPOUND, sizeof(H5_float_complex));
     H5Tinsert(mem_tid, "float_complex_mem", 0, H5T_NATIVE_FLOAT_COMPLEX);
 
-    tid = H5Tcreate(H5T_COMPOUND, H5Tget_size(H5T_CPLX_IEEE_F32LE));
-    H5Tinsert(tid, "float_complex_mem", 0, H5T_CPLX_IEEE_F32LE);
+    tid = H5Tcreate(H5T_COMPOUND, H5Tget_size(H5T_COMPLEX_IEEE_F32LE));
+    H5Tinsert(tid, "float_complex_mem", 0, H5T_COMPLEX_IEEE_F32LE);
 
     dataset = H5Dcreate2(fid, F95_DSET_COMP_FC, tid, space, H5P_DEFAULT, H5P_DEFAULT, H5P_DEFAULT);
 
@@ -12426,7 +12426,7 @@ gent_complex(void)
     /* Variable-length of float complex dataset */
     mem_tid = H5Tvlen_create(H5T_NATIVE_FLOAT_COMPLEX);
 
-    tid = H5Tvlen_create(H5T_CPLX_IEEE_F32LE);
+    tid = H5Tvlen_create(H5T_COMPLEX_IEEE_F32LE);
 
     varlen_space = H5Screate_simple(1, varlen_dims, NULL);
 
@@ -12463,7 +12463,7 @@ gent_complex(void)
     /* Array of float complex dataset */
     mem_tid = H5Tarray_create2(H5T_NATIVE_FLOAT_COMPLEX, 2, dims);
 
-    tid = H5Tarray_create2(H5T_CPLX_IEEE_F32LE, 2, dims);
+    tid = H5Tarray_create2(H5T_COMPLEX_IEEE_F32LE, 2, dims);
 
     single_space = H5Screate_simple(2, single_dims, NULL);
 
@@ -12547,7 +12547,7 @@ gent_complex_be(void)
     /* float complex dataset */
     H5Pset_fill_value(dcpl_id, H5T_NATIVE_FLOAT_COMPLEX, &fc_fillval);
 
-    dataset = H5Dcreate2(fid, F96_DSET_FC, H5T_CPLX_IEEE_F32BE, space, H5P_DEFAULT, dcpl_id, H5P_DEFAULT);
+    dataset = H5Dcreate2(fid, F96_DSET_FC, H5T_COMPLEX_IEEE_F32BE, space, H5P_DEFAULT, dcpl_id, H5P_DEFAULT);
 
     dset_fc = malloc(sizeof(*dset_fc));
 
@@ -12571,7 +12571,7 @@ gent_complex_be(void)
     /* Create a float complex attribute on the dataset with a single value */
     single_space = H5Screate_simple(2, single_dims, NULL);
 
-    attr = H5Acreate2(dataset, F96_ATTR_FC, H5T_CPLX_IEEE_F32BE, single_space, H5P_DEFAULT, H5P_DEFAULT);
+    attr = H5Acreate2(dataset, F96_ATTR_FC, H5T_COMPLEX_IEEE_F32BE, single_space, H5P_DEFAULT, H5P_DEFAULT);
 
     H5Awrite(attr, H5T_NATIVE_FLOAT_COMPLEX, &fc_fillval);
 
@@ -12582,7 +12582,7 @@ gent_complex_be(void)
     /* double complex dataset */
     H5Pset_fill_value(dcpl_id, H5T_NATIVE_DOUBLE_COMPLEX, &dc_fillval);
 
-    dataset = H5Dcreate2(fid, F96_DSET_DC, H5T_CPLX_IEEE_F64BE, space, H5P_DEFAULT, dcpl_id, H5P_DEFAULT);
+    dataset = H5Dcreate2(fid, F96_DSET_DC, H5T_COMPLEX_IEEE_F64BE, space, H5P_DEFAULT, dcpl_id, H5P_DEFAULT);
 
     dset_dc = malloc(sizeof(*dset_dc));
 
@@ -12646,8 +12646,8 @@ gent_complex_be(void)
     mem_tid = H5Tcreate(H5T_COMPOUND, sizeof(H5_float_complex));
     H5Tinsert(mem_tid, "float_complex_mem", 0, H5T_NATIVE_FLOAT_COMPLEX);
 
-    tid = H5Tcreate(H5T_COMPOUND, H5Tget_size(H5T_CPLX_IEEE_F32BE));
-    H5Tinsert(tid, "float_complex_mem", 0, H5T_CPLX_IEEE_F32BE);
+    tid = H5Tcreate(H5T_COMPOUND, H5Tget_size(H5T_COMPLEX_IEEE_F32BE));
+    H5Tinsert(tid, "float_complex_mem", 0, H5T_COMPLEX_IEEE_F32BE);
 
     dataset = H5Dcreate2(fid, F96_DSET_COMP_FC, tid, space, H5P_DEFAULT, H5P_DEFAULT, H5P_DEFAULT);
 
@@ -12677,7 +12677,7 @@ gent_complex_be(void)
     /* Variable-length of float complex dataset */
     mem_tid = H5Tvlen_create(H5T_NATIVE_FLOAT_COMPLEX);
 
-    tid = H5Tvlen_create(H5T_CPLX_IEEE_F32BE);
+    tid = H5Tvlen_create(H5T_COMPLEX_IEEE_F32BE);
 
     varlen_space = H5Screate_simple(1, varlen_dims, NULL);
 
@@ -12714,7 +12714,7 @@ gent_complex_be(void)
     /* Array of float complex dataset */
     mem_tid = H5Tarray_create2(H5T_NATIVE_FLOAT_COMPLEX, 2, dims);
 
-    tid = H5Tarray_create2(H5T_CPLX_IEEE_F32BE, 2, dims);
+    tid = H5Tarray_create2(H5T_COMPLEX_IEEE_F32BE, 2, dims);
 
     single_space = H5Screate_simple(2, single_dims, NULL);
 

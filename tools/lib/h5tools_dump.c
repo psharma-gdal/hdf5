@@ -2634,18 +2634,18 @@ found_string_type:
             break;
 
         case H5T_COMPLEX:
-            if (H5Tequal(type, H5T_CPLX_IEEE_F16BE) == true)
-                h5tools_str_append(buffer, "H5T_CPLX_IEEE_F16BE");
-            else if (H5Tequal(type, H5T_CPLX_IEEE_F16LE) == true)
-                h5tools_str_append(buffer, "H5T_CPLX_IEEE_F16LE");
-            else if (H5Tequal(type, H5T_CPLX_IEEE_F32BE) == true)
-                h5tools_str_append(buffer, "H5T_CPLX_IEEE_F32BE");
-            else if (H5Tequal(type, H5T_CPLX_IEEE_F32LE) == true)
-                h5tools_str_append(buffer, "H5T_CPLX_IEEE_F32LE");
-            else if (H5Tequal(type, H5T_CPLX_IEEE_F64BE) == true)
-                h5tools_str_append(buffer, "H5T_CPLX_IEEE_F64BE");
-            else if (H5Tequal(type, H5T_CPLX_IEEE_F64LE) == true)
-                h5tools_str_append(buffer, "H5T_CPLX_IEEE_F64LE");
+            if (H5Tequal(type, H5T_COMPLEX_IEEE_F16BE) == true)
+                h5tools_str_append(buffer, "H5T_COMPLEX_IEEE_F16BE");
+            else if (H5Tequal(type, H5T_COMPLEX_IEEE_F16LE) == true)
+                h5tools_str_append(buffer, "H5T_COMPLEX_IEEE_F16LE");
+            else if (H5Tequal(type, H5T_COMPLEX_IEEE_F32BE) == true)
+                h5tools_str_append(buffer, "H5T_COMPLEX_IEEE_F32BE");
+            else if (H5Tequal(type, H5T_COMPLEX_IEEE_F32LE) == true)
+                h5tools_str_append(buffer, "H5T_COMPLEX_IEEE_F32LE");
+            else if (H5Tequal(type, H5T_COMPLEX_IEEE_F64BE) == true)
+                h5tools_str_append(buffer, "H5T_COMPLEX_IEEE_F64BE");
+            else if (H5Tequal(type, H5T_COMPLEX_IEEE_F64LE) == true)
+                h5tools_str_append(buffer, "H5T_COMPLEX_IEEE_F64LE");
 #ifdef H5_HAVE_COMPLEX_NUMBERS
             else if (H5Tequal(type, H5T_NATIVE_FLOAT_COMPLEX) == true)
                 h5tools_str_append(buffer, "H5T_NATIVE_FLOAT_COMPLEX");
