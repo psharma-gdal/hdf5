@@ -25,19 +25,19 @@ h5tool_format_t h5tools_dataformat = {
     0, /*raw */
 
     "",         /*fmt_raw */
-    "%d",       /*fmt_int */
-    "%u",       /*fmt_uint */
     "%hhd",     /*fmt_schar */
     "%u",       /*fmt_uchar */
     "%d",       /*fmt_short */
     "%u",       /*fmt_ushort */
+    "%d",       /*fmt_int */
+    "%u",       /*fmt_uint */
     "%ld",      /*fmt_long */
     "%lu",      /*fmt_ulong */
     NULL,       /*fmt_llong */
     NULL,       /*fmt_ullong */
-    "%Lg",      /*fmt_ldouble */
-    "%g",       /*fmt_double */
     "%g",       /*fmt_float */
+    "%g",       /*fmt_double */
+    "%Lg",      /*fmt_ldouble */
     "%g%+gi",   /*fmt_float_complex */
     "%g%+gi",   /*fmt_double_complex */
     "%Lg%+Lgi", /*fmt_ldouble_complex */

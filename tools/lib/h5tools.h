@@ -235,12 +235,6 @@ typedef struct h5tool_format_t {
      *   fmt_raw:              The printf() format for each byte of raw data. The
      *                         default is `%02x'.
      *
-     *   fmt_int:              The printf() format to use when rendering data which is
-     *                         typed `int'. The default is `%d'.
-     *
-     *   fmt_uint:             The printf() format to use when rendering data which is
-     *                         typed `unsigned'. The default is `%u'.
-     *
      *   fmt_schar:            The printf() format to use when rendering data which is
      *                         typed `signed char'. The default is `%d'. This format is
      *                         used only if the `ascii' field is zero.
@@ -254,6 +248,12 @@ typedef struct h5tool_format_t {
      *
      *   fmt_ushort:           The printf() format to use when rendering data which is
      *                         typed `unsigned short'. The default is `%u'.
+     *
+     *   fmt_int:              The printf() format to use when rendering data which is
+     *                         typed `int'. The default is `%d'.
+     *
+     *   fmt_uint:             The printf() format to use when rendering data which is
+     *                         typed `unsigned'. The default is `%u'.
      *
      *   fmt_long:             The printf() format to use when rendering data which is
      *                         typed `long'. The default is `%ld'.
@@ -269,14 +269,14 @@ typedef struct h5tool_format_t {
      *                         typed `unsigned long long'. The default depends on what
      *                         printf() format is available to print this datatype.
      *
-     *   fmt_ldouble:          The printf() format to use when rendering data which is
-     *                         typed `long double'. The default is `%Lg'.
+     *   fmt_float:            The printf() format to use when rendering data which is
+     *                         typed `float'. The default is `%g'.
      *
      *   fmt_double:           The printf() format to use when rendering data which is
      *                         typed `double'. The default is `%g'.
      *
-     *   fmt_float:            The printf() format to use when rendering data which is
-     *                         typed `float'. The default is `%g'.
+     *   fmt_ldouble:          The printf() format to use when rendering data which is
+     *                         typed `long double'. The default is `%Lg'.
      *
      *   fmt_float_complex:    The printf() format to use when rendering data which is
      *                         typed `float _Complex' / `_Fcomplex'. The default is
@@ -310,19 +310,19 @@ typedef struct h5tool_format_t {
      */
     bool        raw;
     const char *fmt_raw;
-    const char *fmt_int;
-    const char *fmt_uint;
     const char *fmt_schar;
     const char *fmt_uchar;
     const char *fmt_short;
     const char *fmt_ushort;
+    const char *fmt_int;
+    const char *fmt_uint;
     const char *fmt_long;
     const char *fmt_ulong;
     const char *fmt_llong;
     const char *fmt_ullong;
-    const char *fmt_ldouble;
-    const char *fmt_double;
     const char *fmt_float;
+    const char *fmt_double;
+    const char *fmt_ldouble;
     const char *fmt_float_complex;
     const char *fmt_double_complex;
     const char *fmt_ldouble_complex;
