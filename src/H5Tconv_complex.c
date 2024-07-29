@@ -74,9 +74,6 @@ H5T__conv_complex(const H5T_t *src_p, const H5T_t *dst_p, H5T_cdata_t *cdata, co
                 HGOTO_ERROR(H5E_ARGS, H5E_BADTYPE, FAIL, "invalid source complex number datatype");
             if (!H5T_IS_ATOMIC(dst_p->shared->parent->shared))
                 HGOTO_ERROR(H5E_ARGS, H5E_BADTYPE, FAIL, "invalid destination complex number datatype");
-            if (!src_p->shared->u.cplx.homogeneous || !dst_p->shared->u.cplx.homogeneous)
-                HGOTO_ERROR(H5E_ARGS, H5E_BADTYPE, FAIL,
-                            "source and destination complex number datatypes must be homogeneous");
             src_atomic = src_p->shared->parent->shared->u.atomic;
             dst_atomic = dst_p->shared->parent->shared->u.atomic;
             if (H5T_ORDER_LE != src_atomic.order && H5T_ORDER_BE != src_atomic.order &&
@@ -150,10 +147,8 @@ H5T__conv_complex_loop(const H5T_t *src_p, const H5T_t *dst_p, const H5T_conv_ct
 
     assert(src_p);
     assert(src_p->shared->type == H5T_COMPLEX);
-    assert(src_p->shared->u.cplx.homogeneous);
     assert(dst_p);
     assert(dst_p->shared->type == H5T_COMPLEX);
-    assert(dst_p->shared->u.cplx.homogeneous);
     assert(conv_ctx);
     assert(buf);
 
@@ -1286,9 +1281,6 @@ H5T__conv_complex_compat(const H5T_t *src, const H5T_t *dst, H5T_cdata_t *cdata,
                 other_type   = src;
             }
 
-            if (!complex_type->shared->u.cplx.homogeneous)
-                HGOTO_ERROR(H5E_DATATYPE, H5E_UNSUPPORTED, FAIL,
-                            "unsupported form of complex number datatype for conversion");
             if (complex_type->shared->u.cplx.form != H5T_COMPLEX_RECTANGULAR)
                 HGOTO_ERROR(H5E_DATATYPE, H5E_UNSUPPORTED, FAIL,
                             "unsupported form of complex number datatype for conversion");

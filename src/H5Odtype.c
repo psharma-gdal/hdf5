@@ -830,15 +830,17 @@ H5O__dtype_decode_helper(unsigned *ioflags /*in,out*/, const uint8_t **pp, H5T_t
                 dt->shared->force_conv = true;
             break;
 
-        case H5T_COMPLEX:
+        case H5T_COMPLEX: {
+            bool homogeneous;
+
             /*
              * Complex number datatypes...
              */
 
             /* Set whether the complex number datatype is homogeneous */
-            dt->shared->u.cplx.homogeneous = (bool)(flags & 0x01);
+            homogeneous = (bool)(flags & 0x01);
 
-            if (!dt->shared->u.cplx.homogeneous)
+            if (!homogeneous)
                 HGOTO_ERROR(H5E_DATATYPE, H5E_UNSUPPORTED, FAIL,
                             "heterogeneous complex number datatypes are currently unsupported");
 
@@ -867,6 +869,7 @@ H5O__dtype_decode_helper(unsigned *ioflags /*in,out*/, const uint8_t **pp, H5T_t
             H5O_DTYPE_CHECK_VERSION(dt, version, H5O_DTYPE_VERSION_5, ioflags, "complex", FAIL)
 
             break;
+        }
 
         case H5T_NO_CLASS:
         case H5T_NCLASSES:
@@ -1392,16 +1395,14 @@ H5O__dtype_encode_helper(uint8_t **pp, const H5T_t *dt)
             /* Check that the version is at least as great as the parent */
             assert(dt->shared->version >= dt->shared->parent->shared->version);
 
-            if (!dt->shared->u.cplx.homogeneous)
-                HGOTO_ERROR(H5E_DATATYPE, H5E_CANTENCODE, FAIL,
-                            "heterogeneous complex number datatypes are currently unsupported");
             if (dt->shared->u.cplx.form != H5T_COMPLEX_RECTANGULAR)
                 HGOTO_ERROR(H5E_DATATYPE, H5E_CANTENCODE, FAIL,
                             "complex number datatypes not in rectangular form are currently unsupported");
 
-            /* Store whether complex number is homogeneous in first flag bit */
-            if (dt->shared->u.cplx.homogeneous)
-                flags |= 0x01;
+            /* Store that complex number is homogeneous in first flag bit;
+             * Currently, only homogeneous complex number datatypes are supported.
+             */
+            flags |= 0x01;
 
             /* Store complex number form in next two bits */
             flags = (unsigned)(flags | (((unsigned)dt->shared->u.cplx.form & 0x03) << 1));
@@ -1711,10 +1712,7 @@ H5O__dtype_size(const H5F_t *f, const void *_mesg)
             break;
 
         case H5T_COMPLEX:
-            if (dt->shared->u.cplx.homogeneous)
-                ret_value += H5O__dtype_size(f, dt->shared->parent);
-            else
-                ret_value = 0;
+            ret_value += H5O__dtype_size(f, dt->shared->parent);
             break;
 
         case H5T_NO_CLASS:
@@ -2336,10 +2334,9 @@ H5O__dtype_debug(H5F_t *f, const void *mesg, FILE *stream, int indent, int fwidt
                 fprintf(stream, "%*s%-*s %s\n", indent, "", fwidth, "Form:", "invalid");
                 break;
         }
-        if (dt->shared->u.cplx.homogeneous) {
-            fprintf(stream, "%*s%s\n", indent, "", "Base type:");
-            H5O__dtype_debug(f, dt->shared->parent, stream, indent + 3, MAX(0, fwidth - 3));
-        }
+
+        fprintf(stream, "%*s%s\n", indent, "", "Base type:");
+        H5O__dtype_debug(f, dt->shared->parent, stream, indent + 3, MAX(0, fwidth - 3));
     }
     else {
         switch (dt->shared->u.atomic.order) {

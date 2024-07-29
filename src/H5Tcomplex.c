@@ -137,7 +137,6 @@ H5T__complex_create(const H5T_t *base)
 
     /* Set complex number-specific fields */
     dt->shared->u.cplx.form = H5T_COMPLEX_RECTANGULAR; /* Only rectangular form is currently supported */
-    dt->shared->u.cplx.homogeneous = true;
 
     /* Complex number datatypes use a later version of the datatype object header message */
     dt->shared->version = MAX(base->shared->version, H5O_DTYPE_VERSION_5);

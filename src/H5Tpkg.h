@@ -306,8 +306,7 @@ typedef enum H5T_complex_form_t {
 
 /* A complex number datatype */
 typedef struct H5T_complex_t {
-    H5T_complex_form_t form;        /* Form (Rectangular, Polar, Exponential) of complex number */
-    bool               homogeneous; /* Whether the parts of the complex number have the same datatype */
+    H5T_complex_form_t form; /* Form (Rectangular, Polar, Exponential) of complex number */
 } H5T_complex_t;
 
 typedef enum H5T_state_t {

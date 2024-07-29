@@ -440,7 +440,7 @@ H5T_debug(const H5T_t *dt, FILE *stream)
         fprintf(stream, ", tag=\"%s\"", dt->shared->u.opaque.tag);
     }
     else if (H5T_COMPLEX == dt->shared->type) {
-        fprintf(stream, ", %s", dt->shared->u.cplx.homogeneous ? "homogeneous" : "heterogeneous");
+        fprintf(stream, ", homogeneous");
         switch (dt->shared->u.cplx.form) {
             case H5T_COMPLEX_RECTANGULAR:
                 fprintf(stream, ", rectangular form");

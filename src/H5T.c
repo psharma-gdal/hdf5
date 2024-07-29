@@ -2781,7 +2781,6 @@ H5T_detect_class(const H5T_t *dt, H5T_class_t cls, bool from_api)
             HGOTO_DONE(H5T_detect_class(dt->shared->parent, cls, from_api));
             break;
         case H5T_COMPLEX:
-            assert(dt->shared->u.cplx.homogeneous);
             HGOTO_DONE(H5T_detect_class(dt->shared->parent, cls, from_api));
             break;
         case H5T_NO_CLASS:
@@ -4733,10 +4732,6 @@ H5T__set_size(H5T_t *dt, size_t size)
         size_t new_size = size;
 
         if (dt->shared->type == H5T_COMPLEX) {
-            if (!dt->shared->u.cplx.homogeneous)
-                HGOTO_ERROR(H5E_DATATYPE, H5E_BADTYPE, FAIL,
-                            "heterogeneous complex number datatypes are currently unsupported");
-
             if ((new_size % 2) != 0)
                 HGOTO_ERROR(H5E_DATATYPE, H5E_BADVALUE, FAIL,
                             "new datatype size is not evenly divisible by 2");
@@ -5265,16 +5260,6 @@ H5T_cmp(const H5T_t *dt1, const H5T_t *dt2, bool superset)
             break;
 
         case H5T_COMPLEX:
-            /* Make sure the complex number datatypes are both homogeneous or
-             * both heterogeneous
-             */
-            tmp = (dt1->shared->u.cplx.homogeneous > dt2->shared->u.cplx.homogeneous) -
-                  (dt1->shared->u.cplx.homogeneous < dt2->shared->u.cplx.homogeneous);
-            if (tmp < 0)
-                HGOTO_DONE(-1);
-            if (tmp > 0)
-                HGOTO_DONE(1);
-
             /* Make sure the complex number datatypes are both in the same form */
             tmp = (dt1->shared->u.cplx.form > dt2->shared->u.cplx.form) -
                   (dt1->shared->u.cplx.form < dt2->shared->u.cplx.form);
@@ -5283,16 +5268,11 @@ H5T_cmp(const H5T_t *dt1, const H5T_t *dt2, bool superset)
             if (tmp > 0)
                 HGOTO_DONE(1);
 
-            if (dt1->shared->u.cplx.homogeneous) {
-                tmp = H5T_cmp(dt1->shared->parent, dt2->shared->parent, superset);
-                if (tmp < 0)
-                    HGOTO_DONE(-1);
-                if (tmp > 0)
-                    HGOTO_DONE(1);
-            }
-            else
-                /* Heterogeneous complex number datatypes are currently unsupported */
+            tmp = H5T_cmp(dt1->shared->parent, dt2->shared->parent, superset);
+            if (tmp < 0)
                 HGOTO_DONE(-1);
+            if (tmp > 0)
+                HGOTO_DONE(1);
 
             break;
 
