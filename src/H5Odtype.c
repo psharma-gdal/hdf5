@@ -851,6 +851,11 @@ H5O__dtype_decode_helper(unsigned *ioflags /*in,out*/, const uint8_t **pp, H5T_t
                 HGOTO_ERROR(H5E_DATATYPE, H5E_UNSUPPORTED, FAIL,
                             "only complex number datatypes in rectangular form are currently supported");
 
+            /* Other bits of the flags beyond bits 0,1,2 should not be set */
+            if ((flags >> 3) != 0)
+                HGOTO_ERROR(H5E_DATATYPE, H5E_BADVALUE, FAIL,
+                            "invalid flag bits set for complex number datatype");
+
             /* Decode the base datatype of the complex number */
             if (NULL == (dt->shared->parent = H5T__alloc()))
                 HGOTO_ERROR(H5E_DATATYPE, H5E_NOSPACE, FAIL,
