@@ -1655,10 +1655,11 @@ h5tools_str_is_zero(const void *_mem, size_t size)
 {
     const unsigned char *mem = (const unsigned char *)_mem;
 
-    while (size-- > 0)
-        if (mem[size])
-            return false;
-
+    if (mem != NULL) {
+        while (size-- > 0)
+            if (mem[size])
+                return false;
+    }
     return true;
 }
 
